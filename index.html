@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Wallpapers Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mobile Wallpapers Gallery</h1>
+    <p>Browse and download your favorite mobile wallpapers.</p>
+  </header>
+
+  <div class="gallery" id="gallery"></div>
+
+  <!-- JavaScript to dynamically generate 161 gallery items -->
+  <script>
+    const gallery = document.getElementById("gallery");
+    for (let i = 1; i <= 161; i++) {
+      gallery.innerHTML += `
+        <div class="gallery-item">
+          <a href="wallpapers/Wall (${i}).jpeg" download>
+            <img src="wallpapers/Wall (${i}).jpeg" alt="Wallpaper ${i}">
+          </a>
+          <a class="download-btn" href="wallpapers/Wall (${i}).jpeg" download>Download</a>
+        </div>
+      `;
+    }
+  </script>
+
+    <!-- Repeat similar blocks for each wallpaper -->
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Your Website Name</p>
+  </footer>
+</body>
+</html>
